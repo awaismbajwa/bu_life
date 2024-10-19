@@ -1,0 +1,23 @@
+<div ng-show='loggedIn==true' class="row">
+  <div class="col-sm-12">
+
+    <h1 class="col-sm-4 d-inline-flex">Album ID:</h1>
+    <h1 class="col-sm-2 d-inline-flex">{{photo.albumId}}</h1>
+    <h1 class="col-sm-1 d-inline-flex"></h1>
+    <h1 class="col-sm-2 d-inline-flex">ID: </h1>
+    <h1 class="col-sm-2 d-inline-flex">{{photo.id}}</h1>
+  </div>
+  <div class="col-sm-12">
+
+    <h1 class="col-sm-1 d-inline-flex">Title:</h1>
+    <h5 class="col-sm-10 d-inline-flex">{{photo.title}}</h5>
+
+  </div>
+  <div class="col-sm-12">
+    <img ng-src="{{photo.url}}" class="img-rounded" alt="picture" align='right'>
+  </div>
+</div>
+
+<div ng-show='loggedIn==false' class="alert alert-danger" role="alert">
+  You're not logged in!!! Please log in first to access the content of this page. <a href="#login" class="alert-link">Login</a>
+</div>

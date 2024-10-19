@@ -1,0 +1,13 @@
+
+
+.top-buffer60 { margin-top:60px; }
+.top-buffer40 { margin-top:40px; }
+.top20 {margin-top: 20px;}
+
+$actionButtonWidth: 150px;
+
+
+@import "_landing.scss";
+@import "_login.scss";
+@import "_registration.scss";
+@import "_details.scss";

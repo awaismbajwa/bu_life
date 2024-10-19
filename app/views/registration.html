@@ -1,0 +1,47 @@
+
+<form name='registrationForm' class="registration-form" >
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="firstName">First Name</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="firstName" ng-model="user.firstName" placeholder="First Name" ng-required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="familyName">Family Name</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="familyName" ng-model="user.familyName" placeholder="Family Name" ng-required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="dateofbirth">Date of Birth</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="date" name="dateOfbirth" id="dateofbirth"  ng-model="user.dateOfBirth" placeholder="Date of Birth" date-registration />
+    </div>
+    <div class="col-sm-5">
+
+      <div ng-show="registrationForm.dateOfbirth.$touched && registrationForm.dateOfbirth.$error.younger" class="alert alert-danger">
+        Only users older than 18 years can register!
+      </div>
+      <div ng-show="registrationForm.dateOfbirth.$error.future" class="alert alert-danger">Date should not be in future!</div>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="inputPassword">Password</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="password" id="inputPassword" ng-model="user.password" placeholder="Password" ng-required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="email">Email</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="email" ng-model="user.email" placeholder="Email" ng-required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+
+    <div class="col-sm-5 offset-sm-2">
+      <button  class="form-control" type="submit" ng-disabled="registrationForm.$invalid" ng-click="register(user)" class="btn">Register</button>
+    </div>
+  </div>
+</form>

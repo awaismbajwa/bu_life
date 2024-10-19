@@ -1,0 +1,24 @@
+/* line 3, ../sass/style.scss */
+.top-buffer60 {
+  margin-top: 60px;
+}
+
+/* line 4, ../sass/style.scss */
+.top-buffer40 {
+  margin-top: 40px;
+}
+
+/* line 5, ../sass/style.scss */
+.top20 {
+  margin-top: 20px;
+}
+
+/* line 2, ../sass/_landing.scss */
+.registration-button {
+  width: 150px;
+}
+
+/* line 5, ../sass/_landing.scss */
+.login-button {
+  width: 150px;
+}
